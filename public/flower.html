@@ -13,8 +13,8 @@
 
 	<div class="flower">
 		<img src="/assets/flower.jpg" alt="">
-		<a href="javascript:;" class="share" style="font-size: 40pt;padding: 10pt">
-			分享到朋友圈
+		<a href="javascript:void;" class="share" style="font-size: 40pt; padding: 10pt">
+			点击右上角分享到朋友圈
 		</a>
 		<div class="tip">
 			<span></span>
@@ -25,9 +25,9 @@
   $('.flower').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
     $('.share').slideDown(400);
   });
-  $('.share').click(function() {
-    $('.tip').show();
-  });
+  // $('.share').click(function() {
+  //   $('.tip').show();
+  // });
 </script>
 </body>
 </html>
