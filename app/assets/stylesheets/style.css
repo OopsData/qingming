@@ -1,0 +1,80 @@
+@import url(/assets/reset.css);
+@import url(/assets/animate.min.css);
+#fullpage .section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#fullpage .section img {
+  width: 100%;
+  height: 100%;
+}
+#fullpage .section p {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 99;
+}
+#fullpage .section p b {
+  margin: 0 5px;
+}
+#fullpage .section #click {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 16px;
+  z-index: 99;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: red;
+  color: #fff;
+  text-decoration: none;
+}
+.flower {
+  width: 100%;
+  height: 100%;
+}
+.flower img {
+  width: 100%;
+}
+.flower .share {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: blue;
+  color: #fff;
+  text-decoration: none;
+  display: none;
+  font-size: 16px;
+}
+.tip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: .7;
+  filter: alpha(opacity=70);
+  z-index: 10;
+  display: none;
+}
+.tip span {
+  width: 330px;
+  height: 228px;
+  background: url(../images/share.png) no-repeat;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 20;
+}

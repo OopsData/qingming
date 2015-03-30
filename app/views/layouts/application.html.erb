@@ -2,13 +2,34 @@
 <html>
 <head>
   <title>Qingming</title>
+  <!--
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  -->
+
+  <link rel="stylesheet" href="/assets/style.css" />
+  <script src="/assets/jquery-1.11.0.min.js"></script>
+  <script src="/assets/jquery.fullPage.min.js"></script>
+  <script src="/assets/jquery.easings.min.js"></script>
+  <script src="/assets/jquery.slimscroll.min.js"></script>
+  <script src="/assets/example.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= @app.view_count %>
+
 <%= yield %>
 
+  <div id="fullpage">
+      <div data-menuanchor="firstPage" class="section active">
+        <img src="/assets/1.jpg" alt="">
+        <p>您是第<b><%= @app.view_count %></b>位缅怀者</p>
+      </div>
+      <div data-menuanchor="secondPage" class="section"><img src="/assets/2.jpg" alt=""></div>
+      <div data-menuanchor="thirdPage" class="section"><img src="/assets/3.jpg" alt=""></div>
+      <div data-menuanchor="fourthPage" class="section">
+        <img src="/assets/4.jpg" alt="">
+        <a id="click" href="flower.html">点击献花</a>
+      </div>
+  </div>
 </body>
 </html>
