@@ -1,0 +1,806 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 09:28:14 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 09:35:01 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 16ms (Views: 8.5ms)
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:35:57 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.4260ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 21.4170ms
+Completed 500 Internal Server Error in 30ms
+
+NoMethodError (undefined method `view_count' for nil:NilClass):
+  app/controllers/application_controller.rb:9:in `set_view_count'
+
+
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:36:59 +0800
+Processing by FlowersController#index as HTML
+Completed 500 Internal Server Error in 10ms
+
+Mongoid::Errors::InvalidFieldOption (
+Problem:
+  Invalid option :defaul provided for field :view_count.
+Summary:
+  Mongoid requires that you only provide valid options on each field definition in order to prevent unexpected behaviour later on.
+Resolution:
+  When defining the field :view_count on 'App', please provide valid options for the field. These are currently: as, default, identity, label, localize, metadata, pre_processed, subtype, type, overwrite. If you meant to define a custom field option, please do so first like so:
+
+   Mongoid::Fields.option :defaul do |model, field, value|
+     # Your logic here...
+   end
+   class App
+     include Mongoid::Document
+     field :view_count, defaul: true
+   end
+
+):
+  app/models/app.rb:3:in `<class:App>'
+  app/models/app.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:8:in `set_view_count'
+
+
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:17 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7750ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2510ms
+  MOPED: 127.0.0.1:27017 INSERT       database=qingming_development collection=apps documents=[{"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000'), "view_count"=>0}] flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 170.1570ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>1}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 2.0800ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5830ms
+  Rendered flowers/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1150ms (Views: 958.4ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:18 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:18 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:18 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:18 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:18 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:18 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:18 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:18 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4000ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 2.0290ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>2}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3560ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4900ms
+  Rendered flowers/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 24.4ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:20 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3620ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>3}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3140ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2300ms
+  Rendered flowers/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 23.4ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3360ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3280ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>4}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3270ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2350ms
+  Rendered flowers/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 46.2ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:21 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3200ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2760ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>5}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3150ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2210ms
+  Rendered flowers/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 29.3ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3430ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3270ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>6}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3070ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2260ms
+  Rendered flowers/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 26.9ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:22 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3840ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>7}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3200ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2000ms
+  Rendered flowers/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 30.9ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2890ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2960ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>8}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.4970ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2170ms
+  Rendered flowers/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 25.9ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:23 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3510ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>9}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3010ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2240ms
+  Rendered flowers/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.0ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4940ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>10}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 1.1520ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2370ms
+  Rendered flowers/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 29.1ms)
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3740ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>11}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3060ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2150ms
+  Rendered flowers/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 29.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:24 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3860ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>12}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3220ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2670ms
+  Rendered flowers/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 29.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/flowers" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+Processing by FlowersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4010ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>13}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3340ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=flowers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2270ms
+  Rendered flowers/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 38.7ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/flowers.css?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/assets/flowers.js?body=1" for 127.0.0.1 at 2015-03-30 09:37:25 +0800
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-30 09:38:14 +0800
+Processing by HomesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3800ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3480ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>14}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3360ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=homes selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4580ms
+  Rendered homes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 93ms (Views: 82.6ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-30 09:38:15 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:38:15 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:38:15 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:38:15 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:38:15 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:38:15 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-30 09:38:15 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:38:15 +0800
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-30 09:38:50 +0800
+
+ActionController::RoutingError (No route matches [GET] "/homes"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/karma/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/karma/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/karma/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.5ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2015-03-30 09:38:57 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/karma/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/karma/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/karma/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2015-03-30 09:39:07 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/karma/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/karma/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/karma/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-30 09:39:11 +0800
+Processing by HomesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4510ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3100ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>15}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3320ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=homes selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5250ms
+  Rendered homes/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined local variable or method `new_home_path' for #<#<Class:0x007fd04cd30da0>:0x007fd04cd2b968>):
+    20: 
+    21: <br>
+    22: 
+    23: <%= link_to 'New Home', new_home_path %>
+  app/views/homes/index.html.erb:23:in `_app_views_homes_index_html_erb___2783097236775143258_70266342218120'
+
+
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/karma/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.0ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-30 09:39:49 +0800
+Processing by HomesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3420ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2900ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>16}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3270ms
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 27.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+Processing by HomesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3050ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3110ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>17}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3320ms
+  Rendered homes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 32.3ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:50 +0800
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+Processing by HomesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3340ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3090ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>18}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.2920ms
+  Rendered homes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 26.3ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+Processing by HomesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3180ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6230ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5518a8cd6b61725b05000000')} update={"$set"=>{"view_count"=>19}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3350ms
+  Rendered homes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 33ms (Views: 30.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-30 09:39:51 +0800
