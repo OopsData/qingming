@@ -17,7 +17,7 @@
   color: #fff;
   font-size: 16px;
   position: absolute;
-  bottom: 68pt;
+  bottom: 20px;
   left: 0;
   z-index: 99;
 }
@@ -31,7 +31,7 @@
   font-size: 16px;
   z-index: 99;
   width: 100%;
-  height: 50px;
+  height: 68pt;
   line-height: 50px;
   text-align: center;
   background: red;
