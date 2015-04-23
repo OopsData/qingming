@@ -1,9 +1,34 @@
+<script>
+	window.onload=function(){
+		var oBox = document.getElementById('time');
+		//获取现在的时间戳
+		setInterval(function(){
+			var oDate=new Date();
+			var nowTime=oDate.getTime();
+			//获取将要去的时间戳
+			oDate=new Date();
+			oDate.setFullYear(2015,4,24);
+			oDate.setHours(0,0,0,0);
+			var newTime=oDate.getTime();
+			var time= parseInt((newTime-nowTime)/1000); 
+			//变成秒
+			var d= parseInt(time/86400);
+			time%=86400;
+			var h=parseInt(time/3600);
+			time%=3600;
+			var m=parseInt(time/60);
+			var s=time%60;
+			oBox.innerHTML= d+'天'+(h+9)+'小时'+m+'分'+s+'秒';
+		},1000);
+	}
+</script>
+
 <body class="fangshan">
 	<h3>青春房山</h3>
 	<p class="info1">每天<b>100</b>名长走资格</p>
 	<h1>火爆开抢</h1>
 	<p>距离开始还有</p>
-	<p id="time">x小时x分x秒</p>
+	<p id="time"></p>
 	<%= link_to '立即开抢', new_changzou_path, :class => "link" %>
 	<p class="date">开抢时间：2015年4月24日上午9:00</p>
 </body>

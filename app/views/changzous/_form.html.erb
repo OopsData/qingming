@@ -1,25 +1,20 @@
-<%= form_for(@changzou) do |f| %>
-  <% if @changzou.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@changzou.errors.count, "error") %> prohibited this changzou from being saved:</h2>
-
-      <ul>
-      <% @changzou.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label "姓名" %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label "手机号" %><br>
-    <%= f.text_field :mobile %>
-  </div>
-  <div class="actions">
-    <%= f.submit "保存" %>
-  </div>
-<% end %>
+<body class="fangshan">
+  <h3 class="gx">恭喜中奖</h3>
+  <p class="info2">提交联系方式后，到安利房山店青春房山用户专享通道领取奖品</p>
+  <form action="">
+    <p>
+      <input type="text" name="" id="" placeholder="如何称呼">
+    </p>
+    <p>
+      <input type="text" name="" id="" placeholder="手机号码">
+    </p>
+    <a href="javascript:void(0);" class="submit">提交</a>
+  </form>
+  <p class="address">
+    <span style="float:left;">地址：房山区拱辰街道西北关8号良乡西北关综合楼1层</span>
+  </p>
+  <p class="phone">
+    <span style="margin-top:30pt;">联系电话：</span><span>85008346</span>
+  </p>
+   
+</body>
