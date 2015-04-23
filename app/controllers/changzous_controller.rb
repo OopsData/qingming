@@ -14,10 +14,14 @@ class ChangzousController < ApplicationController
 
   # GET /changzous/new
   def new
-    if Time.now.hour < Changzou::MIN_HOUR
-      redirect_to "/changzous", notice: '还未开抢'
-    else
-      @changzou = Changzou.new
+    respond_to do |format|
+      if Time.now.hour < Changzou::MIN_HOUR
+        format.html { redirect_to "/changzous", notice: '还未开抢' }
+      elsif Changzou.today.count >= Changzou::MAX_COUNT
+        format.html { redirect_to "/changzous/over" }
+      else
+        format.html { @changzou = Changzou.new }
+      end
     end
   end
 
@@ -40,13 +44,18 @@ class ChangzousController < ApplicationController
   def create
     @changzou = Changzou.new(changzou_params)
     respond_to do |format|
+      if Time.now.hour < Changzou::MIN_HOUR
+        format.html { redirect_to "/changzous", notice: '还未开抢' }
+        format.json { render json: {errors: "还未开抢"} }
+      elsif Changzou.today.count >= Changzou::MAX_COUNT
+        format.html { redirect_to "/changzous/over" }
+        format.json { render json: {:message => "超过最大数量"}, status: :unprocessable_entity }
+      end
       if @changzou.save 
-        format.html { redirect_to "changzous/share", notice: 'Changzou was successfully created.' }
-        # format.html { redirect_to @changzou, notice: 'Changzou was successfully created.' }
+        format.html { redirect_to "/changzous/share", notice: 'Changzou was successfully created.' }
         format.json { render :show, status: :created, location: @changzou }
       else
-        format.html { redirect_to "changzous/over", notice: 'Changzou was successfully created.' }
-        # format.html { render :new }
+        format.html { redirect_to "/changzous/over"}
         format.json { render json: @changzou.errors, status: :unprocessable_entity }
       end
     end
