@@ -85,4 +85,29 @@ app/assets/images/about/team/.picasaoriginals/yzx.jpg
 app/assets/images/about/team/.picasaoriginals/zsg.png
 
 app/assets/images/about/team/zsg.png
+<<<<<<< HEAD
 >>>>>>> e22f5a2f997ab7a69592d847f7f6b623b2d51c71
+=======
+
+# scm revert files
+**.orig
+
+# Mac finder artifacts
+.DS_Store
+
+# Netbeans project directory
+/nbproject/
+
+# RubyMine project files
+.idea
+
+# Textmate project files
+/*.tmproj
+
+# vim artifacts
+**.swp
+
+# Environment files that may contain sensitive data
+.env
+.powenv
+>>>>>>> 229bd8132f1316ddfc5f4e56ba66ec95d446bf0c

@@ -1,0 +1,25 @@
+<%= form_for(@changzou) do |f| %>
+  <% if @changzou.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@changzou.errors.count, "error") %> prohibited this changzou from being saved:</h2>
+
+      <ul>
+      <% @changzou.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "姓名" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label "手机号" %><br>
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="actions">
+    <%= f.submit "保存" %>
+  </div>
+<% end %>

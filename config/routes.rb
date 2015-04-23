@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :changzous do
+    collection do
+      get :share, :over
+    end
+  end
+
   resources :homes , :only => [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.
