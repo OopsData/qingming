@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>“缅怀先烈 民族复兴”一同祭奠抗日烈士</title>
+	<link rel="stylesheet" href="/assets/style.css" />
+	<script src="/assets/jquery-1.11.0.min.js"></script>
+	<script src="/assets/jquery.easings.min.js"></script>
+	<script src="/assets/jquery.slimscroll.min.js"></script>
+	<link rel="stylesheet/less" href="/assets/style.less"/>
+</head>
+<body>
+
+	<div class="flower">
+		<img src="/assets/flower.jpg" alt="">
+		<a href="javascript:void;" class="share" style="font-size: 40pt; padding: 10pt">
+			点击右上角分享到朋友圈
+		</a>
+		<div class="tip">
+			<span></span>
+		</div>
+	</div>
+<script type="text/javascript">
+  $('.flower').addClass('animated zoomInUp');
+  $('.flower').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $('.share').slideDown(400);
+  });
+  // $('.share').click(function() {
+  //   $('.tip').show();
+  // });
+</script>
+</body>
+</html>
