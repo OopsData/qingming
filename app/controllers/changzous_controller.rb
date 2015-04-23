@@ -4,7 +4,7 @@ class ChangzousController < ApplicationController
   # GET /changzous
   # GET /changzous.json
   def index
-    @changzous = Changzou.all
+    
   end
 
   # GET /changzous/1
@@ -48,9 +48,11 @@ class ChangzousController < ApplicationController
       if Time.now.hour < Changzou::MIN_HOUR
         format.html { redirect_to "/changzous", notice: '还未开抢' }
         format.json { render json: {errors: "还未开抢"} }
+        return
       elsif Changzou.today.count >= Changzou::MAX_COUNT
         format.html { redirect_to "/changzous/over" }
         format.json { render json: {:message => "超过最大数量"}, status: :unprocessable_entity }
+        return
       end
       if @changzou.save 
         format.html { redirect_to "/changzous/share", notice: 'Changzou was successfully created.' }
