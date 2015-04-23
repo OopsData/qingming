@@ -80,3 +80,50 @@
   top: 0;
   z-index: 20;
 }
+.fangshan{
+  background: url(bg.jpg) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  font-size: 34pt;
+  color:#fff;
+}
+.fangshan h3{
+  font-size: 70pt;
+  text-align: center;
+  margin-top:230pt;
+}
+.fangshan p{
+  text-align: center;
+  margin:20pt 0;
+}
+.fangshan .info1{
+  font-size: 40pt;
+}
+.fangshan h1{
+  font-size: 100pt;
+  text-align: center;
+  margin:30pt 0;
+  margin-bottom:100pt;
+}
+.fangshan .link{
+  width:80%;
+  height:140pt;
+  line-height: 140pt;
+  margin:0 auto;
+  display: block;
+  text-align: center;
+  background: #2EB174;
+  font-size: 50pt;
+  color:#fff;
+  margin-top:130pt;
+}
+.fangshan #time{
+  font-size: 60pt;
+}
+.fangshan .date{
+  font-size: 36pt;
+}
+
+
+
+
