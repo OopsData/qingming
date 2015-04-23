@@ -5,7 +5,8 @@ $(->
 	window.finger = new Fingerprint({canvas: true}).get()
 	$.get('/changzous/check',{finger:window.finger},(ret)->
 		if ret.cz
-			window.location.ref = '/changzous/share'
+			unless window.location.href.indexOf('share') > 0 
+				window.location.href='/changzous/share'
 	)
 	$('#changzou_finger').val(window.finger)
 )

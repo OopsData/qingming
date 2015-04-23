@@ -101,6 +101,6 @@ class ChangzousController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def changzou_params
-      params.require(:changzou).permit(:name, :mobile)
+      params.require(:changzou).permit(:name, :mobile,:finger)
     end
 end

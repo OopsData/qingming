@@ -7,8 +7,8 @@
 			var nowTime=oDate.getTime();
 			//获取将要去的时间戳
 			oDate=new Date();
-			oDate.setFullYear(2015,3,24);
-			oDate.setHours(0,0,0,0);
+			oDate.setFullYear(2015,2,24);
+			oDate.setHours(9,0,0,0);
 			var newTime=oDate.getTime();
 			var time= parseInt((newTime-nowTime)/1000); 
 			//变成秒
@@ -18,8 +18,16 @@
 			time%=3600;
 			var m=parseInt(time/60);
 			var s=time%60;
-			oBox.innerHTML= d+'天'+(h+9)+'小时'+m+'分'+s+'秒';
-			if(d==0 && h==0 && m==0 && s==0){
+			if(d < 0)
+				d = 0;
+			if(h < 0)
+				h = 0;
+			if(m < 0)
+				m = 0;
+			if(s < 0)
+				s = 0;
+			oBox.innerHTML= d+'天'+(h)+'小时'+m+'分'+s+'秒';
+			if(time <= 0){
 				document.getElementById('link').style.display = 'block';
 			}
 		},1000);
