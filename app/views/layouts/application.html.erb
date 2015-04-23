@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Qingming</title>
+  <title>“缅怀先烈 民族复兴”一同祭奠抗日烈士</title>
+  <!--
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  -->
+
+  <link rel="stylesheet" href="/assets/style.css" />
+  <script src="/assets/jquery-1.11.0.min.js"></script>
+  <script src="/assets/jquery.fullPage.min.js"></script>
+  <script src="/assets/jquery.easings.min.js"></script>
+  <script src="/assets/jquery.slimscroll.min.js"></script>
+  <script src="/assets/example.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= @app.view_count %>
+
 <%= yield %>
 
+  <div id="fullpage">
+      <div data-menuanchor="firstPage" class="section active">
+        <img src="/assets/1.jpg" alt="">
+        <p style="font-size:28pt">您是第<b><%= @app.view_count %></b>位缅怀者</p>
+      </div>
+      <div data-menuanchor="secondPage" class="section"><img src="/assets/2.jpg" alt=""></div>
+      <div data-menuanchor="thirdPage" class="section"><img src="/assets/3.jpg" alt=""></div>
+      <div data-menuanchor="fourthPage" class="section" style="padding: 10pt;">
+        <img src="/assets/4.jpg" alt="">
+        <a style="font-size: 48pt; font-weight: bold;" id="click" href="flower.html">点击献花</a>
+      </div>
+  </div>
 </body>
 </html>
