@@ -1,15 +1,15 @@
 <body class="fangshan">
   <h3 class="gx">恭喜中奖</h3>
   <p class="info2">提交联系方式后，到安利房山店青春房山用户专享通道领取奖品</p>
-  <form action="">
+  <%= form_for(@changzou) do |f| %>
     <p>
-      <input type="text" name="" id="" placeholder="如何称呼">
+      <%= f.text_field :name,  :placeholder => "如何称呼" %>
     </p>
     <p>
-      <input type="text" name="" id="" placeholder="手机号码">
+      <%= f.text_field :mobile, :placeholder => "手机号码" %>
     </p>
-    <a href="javascript:void(0);" class="submit">提交</a>
-  </form>
+    <%= f.submit "提交", :class => "submit" %>
+  <% end %>
   <p class="address">
     <span style="float:left;">地址：房山区拱辰街道西北关8号良乡西北关综合楼1层</span>
   </p>
