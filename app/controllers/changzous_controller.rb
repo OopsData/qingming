@@ -16,7 +16,7 @@ class ChangzousController < ApplicationController
   def new
     respond_to do |format|
       tt = Time.now
-      if tt.hour < Changzou::MIN_HOUR# || tt.at_beginning_of_day < Time.parse("2015-4-24")
+      if tt.hour < Changzou::MIN_HOUR || tt.at_beginning_of_day < Time.parse("2015-4-24")
         format.html { redirect_to "/changzous", notice: '还未开抢' }
       elsif Changzou.today.count >= Changzou::MAX_COUNT
         format.html { redirect_to "/changzous/over" }
