@@ -14,24 +14,39 @@ class ChangzousController < ApplicationController
 
   # GET /changzous/new
   def new
-    @changzou = Changzou.new
+    if Time.now.hour < Changzou::MIN_HOUR
+      redirect_to "/changzous", notice: '还未开抢'
+    else
+      @changzou = Changzou.new
+    end
   end
 
   # GET /changzous/1/edit
   def edit
   end
 
+  # GET /changzous/share
+  def share
+    
+  end
+
+  # GET /changzous/over
+  def over
+    
+  end
+
   # POST /changzous
   # POST /changzous.json
   def create
     @changzou = Changzou.new(changzou_params)
-
     respond_to do |format|
-      if @changzou.save
-        format.html { redirect_to @changzou, notice: 'Changzou was successfully created.' }
+      if @changzou.save 
+        format.html { redirect_to "changzous/share", notice: 'Changzou was successfully created.' }
+        # format.html { redirect_to @changzou, notice: 'Changzou was successfully created.' }
         format.json { render :show, status: :created, location: @changzou }
       else
-        format.html { render :new }
+        format.html { redirect_to "changzous/over", notice: 'Changzou was successfully created.' }
+        # format.html { render :new }
         format.json { render json: @changzou.errors, status: :unprocessable_entity }
       end
     end

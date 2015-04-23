@@ -1,27 +1,3 @@
-<h1>Listing changzous</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Mobile</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @changzous.each do |changzou| %>
-      <tr>
-        <td><%= changzou.name %></td>
-        <td><%= changzou.mobile %></td>
-        <td><%= link_to 'Show', changzou %></td>
-        <td><%= link_to 'Edit', edit_changzou_path(changzou) %></td>
-        <td><%= link_to 'Destroy', changzou, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Changzou', new_changzou_path %>
+<%= link_to '点我开抢', new_changzou_path %>
