@@ -28,7 +28,9 @@
 				s = 0;
 			oBox.innerHTML= d+'天'+(h)+'小时'+m+'分'+s+'秒';
 			if(time <= 0){
-				document.getElementById('link').style.display = 'block';
+				if (window.location.href.indexOf('new') < 0){
+					document.getElementById('link').style.display = 'block';	
+				}
 			}
 		},1000);
 	}
