@@ -190,7 +190,14 @@
   margin-top:30pt;
   border-radius: 10px;
 }
-
+.jt{
+  width:200px;
+  height:200px;
+  background: url(jt.png) no-repeat;
+  position: absolute;
+  top:10pt;
+  right:30pt;
+}
 p.address,
 p.phone{
   width:78%;
