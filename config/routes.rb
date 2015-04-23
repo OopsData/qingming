@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :changzous do
     collection do
       get :share, :over
+      get :check
     end
   end
 
