@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(->
 	window.finger = new Fingerprint({canvas: true}).get()
-	console.log('dddddd')
+	$('#changzou_finger').val(window.finger)
 )

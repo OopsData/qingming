@@ -13239,3 +13239,734 @@ Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:47:50 +0800
 
 
 Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:47:50 +0800
+
+
+Started GET "/changzous" for 127.0.0.1 at 2015-04-23 17:49:55 +0800
+Processing by ChangzousController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2650ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4070ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>10}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.4270ms
+  Rendered changzous/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1551ms (Views: 1528.8ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:49:57 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:49:57 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:49:57 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:49:57 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:49:57 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:49:57 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:49:57 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:49:57 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:49:57 +0800
+
+
+Started GET "/changzous" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+Processing by ChangzousController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5640ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>11}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.4840ms
+  Rendered changzous/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 125ms (Views: 122.1ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:50:07 +0800
+
+
+Started GET "/changzous/new" for 127.0.0.1 at 2015-04-23 17:50:21 +0800
+Processing by ChangzousController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3480ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4240ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>12}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.4290ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 39.8630ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.4730ms
+  Rendered changzous/_form.html.erb (6.8ms)
+  Rendered changzous/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 151ms (Views: 107.3ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:50:22 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:50:22 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:50:22 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:50:22 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:50:22 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:50:22 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:50:22 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:50:22 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:50:22 +0800
+
+
+Started GET "/changzous/new" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+Processing by ChangzousController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4050ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3590ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>13}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.4160ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.4540ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.4140ms
+  Rendered changzous/_form.html.erb (1.7ms)
+  Rendered changzous/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 177ms (Views: 164.3ms)
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:52:49 +0800
+
+
+Started GET "/changzous/new" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+Processing by ChangzousController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4880ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5040ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>14}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.4110ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.2710ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.3240ms
+  Rendered changzous/_form.html.erb (1.0ms)
+  Rendered changzous/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 127ms (Views: 122.1ms)
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/changzous.css?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/jquery.fullPage.css?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/fingerprint.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/changzous.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/example.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:55:56 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:55:57 +0800
+
+
+Started GET "/changzous/new" for 127.0.0.1 at 2015-04-23 17:56:48 +0800
+Processing by ChangzousController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3620ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3960ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>15}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3490ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.2660ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.2870ms
+  Rendered changzous/_form.html.erb (0.8ms)
+  Rendered changzous/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 182ms (Views: 178.0ms)
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2015-04-23 17:56:48 +0800
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/changzous.css?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/jquery.fullPage.css?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/fingerprint.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/changzous.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/example.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:56:49 +0800
+
+
+Started GET "/changzous/new" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+Processing by ChangzousController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4800ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4610ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>16}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.4440ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.2830ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.3150ms
+  Rendered changzous/_form.html.erb (0.9ms)
+  Rendered changzous/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 190ms (Views: 185.5ms)
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/changzous.css?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/jquery.fullPage.css?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/fingerprint.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/changzous.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/example.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:57:24 +0800
+
+
+Started GET "/changzous/new" for 127.0.0.1 at 2015-04-23 17:58:27 +0800
+Processing by ChangzousController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4240ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4540ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>17}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.4910ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.3760ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.2950ms
+  Rendered changzous/_form.html.erb (34.9ms)
+  Rendered changzous/new.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 142ms (Views: 136.9ms)
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/jquery.fullPage.css?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/changzous.css?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/fingerprint.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/changzous.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/example.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:58:28 +0800
+
+
+Started GET "/changzous/new" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+Processing by ChangzousController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3970ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3910ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>18}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3710ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.2660ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.3060ms
+  Rendered changzous/_form.html.erb (1.0ms)
+  Rendered changzous/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 178ms (Views: 174.0ms)
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/changzous.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/jquery.fullPage.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/fingerprint.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/changzous.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/example.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:59:06 +0800
+
+
+Started POST "/changzous" for 127.0.0.1 at 2015-04-23 17:59:21 +0800
+Processing by ChangzousController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hd3D8+RKfaKxxtJYZBEh6goGmyQdhJF4bClDd1tfgsk=", "changzou"=>{"finger"=>"1010400885", "name"=>"gaoguoxin", "mobile"=>"15210427877"}, "commit"=>"提交"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4670ms
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3570ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>19}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.3820ms
+Unpermitted parameters: finger
+  MOPED: 127.0.0.1:27017 COMMAND      database=qingming_development command={:count=>"changzous", :query=>{"created_at"=>{"$gt"=>2015-04-22 16:00:00 UTC}}} runtime: 0.3390ms
+  MOPED: 127.0.0.1:27017 INSERT       database=qingming_development collection=changzous documents=[{"_id"=>BSON::ObjectId('5538c279787465d7b3000000'), "name"=>"gaoguoxin", "mobile"=>"15210427877", "updated_at"=>2015-04-23 09:59:21 UTC, "created_at"=>2015-04-23 09:59:21 UTC}] flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 39.9830ms
+Redirected to http://localhost:3000/changzous/share
+Completed 302 Found in 47ms
+
+
+Started GET "/changzous/share" for 127.0.0.1 at 2015-04-23 17:59:21 +0800
+Processing by ChangzousController#share as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=qingming_development collection=apps selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4970ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=qingming_development collection=apps selector={"_id"=>BSON::ObjectId('5538be00787465d623000000')} update={"$set"=>{"view_count"=>20}} flags=[]
+                         COMMAND      database=qingming_development command={:getlasterror=>1, :w=>1} runtime: 0.4070ms
+  Rendered changzous/share.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 97ms (Views: 94.4ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:21 +0800
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:21 +0800
+
+
+Started GET "/assets/animate.min.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:21 +0800
+
+
+Started GET "/assets/jquery.fullPage.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:21 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/changzous.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/fingerprint.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/animate.min.css" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/changzous.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/example.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/jquery.fullPage.min.js" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/jquery.easings.min.js" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/jquery.slimscroll.min.js" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/example.js" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
+
+
+Started GET "/assets/jt.png" for 127.0.0.1 at 2015-04-23 17:59:22 +0800
