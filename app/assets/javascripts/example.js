@@ -1,3 +1,3 @@
-jQuery(function(){
-	$('#fullpage').fullpage();
-});
+// jQuery(function(){
+// 	$('#fullpage').fullpage();
+// });
