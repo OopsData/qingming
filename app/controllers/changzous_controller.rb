@@ -15,7 +15,7 @@ class ChangzousController < ApplicationController
   # GET /changzous/new
   def new
     respond_to do |format|
-      tt = Time.now.
+      tt = Time.now
       if tt.hour < Changzou::MIN_HOUR || tt.at_beginning_of_day < Time.parse("2015-4-24")
         format.html { redirect_to "/changzous", notice: '还未开抢' }
       elsif Changzou.today.count >= Changzou::MAX_COUNT
@@ -60,6 +60,11 @@ class ChangzousController < ApplicationController
         format.json { render json: @changzou.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def check
+    cz = Changzou.where(finger:params[:finger]).first
+    render :json => {cz:cz}
   end
 
   # PATCH/PUT /changzous/1
