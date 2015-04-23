@@ -48,15 +48,14 @@ class ChangzousController < ApplicationController
         format.html { redirect_to "/changzous", notice: '还未开抢' }
         format.json { render json: {errors: "还未开抢"} }
       elsif Changzou.today.count >= Changzou::MAX_COUNT
-        format.html { redirect_to "changzous/over" }
+        format.html { redirect_to "/changzous/over" }
         format.json { render json: {:message => "超过最大数量"}, status: :unprocessable_entity }
       end
-      binding.pry
       if @changzou.save 
-        format.html { redirect_to "changzous/share", notice: 'Changzou was successfully created.' }
+        format.html { redirect_to "/changzous/share", notice: 'Changzou was successfully created.' }
         format.json { render :show, status: :created, location: @changzou }
       else
-        format.html { redirect_to "changzous/over"}
+        format.html { redirect_to "/changzous/over"}
         format.json { render json: @changzou.errors, status: :unprocessable_entity }
       end
     end
