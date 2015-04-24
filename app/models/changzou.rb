@@ -1,6 +1,6 @@
 class Changzou
   MAX_COUNT = 100
-  MIN_HOUR = 9
+  MIN_HOUR = 12
   
   include Mongoid::Document
   include Mongoid::Timestamps

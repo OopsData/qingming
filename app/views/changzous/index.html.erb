@@ -7,8 +7,8 @@
 			var nowTime=oDate.getTime();
 			//获取将要去的时间戳
 			oDate=new Date();
-			oDate.setFullYear(2015,3,24);
-			oDate.setHours(9,0,0,0);
+			oDate.setFullYear(2015,3,25);
+			oDate.setHours(12,0,0,0);
 			var newTime=oDate.getTime();
 			var time= parseInt((newTime-nowTime)/1000); 
 			//变成秒
@@ -43,7 +43,7 @@
 	<p>距离开始还有</p>
 	<p id="time"></p>
 	<%= link_to '立即开抢', new_changzou_path, :id => "link" %>
-	<p class="date">开抢时间：2015年4月24日上午9:00</p>
+	<p class="date">开抢时间：2015年4月25日上午12:00</p>
 </body>
 
 
